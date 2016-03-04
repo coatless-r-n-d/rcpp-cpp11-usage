@@ -1,0 +1,14 @@
+Package: rc11
+Type: Package
+Title: Test C++11 with Armadillo
+Version: 1.0
+Date: 2016-03-03
+Author: Who wrote it
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?
+LinkingTo: Rcpp,
+    RcppArmadillo
+Imports:
+    Rcpp
+RoxygenNote: 5.0.1
