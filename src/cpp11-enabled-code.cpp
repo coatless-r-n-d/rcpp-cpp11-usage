@@ -11,6 +11,7 @@
 //' @return 
 //' A vector of quantiles
 //' 
+//' @export
 //' @examples
 //' # Compute one quantile
 //' qexp_arma(0.6, 2)
@@ -35,7 +36,10 @@ arma::vec qexp_arma( arma::vec& p, double lambda = 2) {
 //' @param lambda Rate parameter
 //' @param seed   Starting value for the Random Number Generator (RNG).
 //' 
-//' @return A vector of random numbers from an exponential distribution.
+//' @return 
+//' A vector of random numbers from an exponential distribution.
+//' 
+//' @export
 //' @examples
 //' # Generate a random number
 //' rexp_arma(1, lambda = 2)
