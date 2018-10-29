@@ -3,3 +3,7 @@
 language: R
 sudo: false
 cache: packages
+
+env:
+  global:
+  - MAKEFLAGS="-j 2"
