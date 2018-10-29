@@ -6,35 +6,35 @@
 
 using namespace Rcpp;
 
-// qexp
-arma::vec qexp(arma::vec& u, double lambda);
-RcppExport SEXP _r11_qexp(SEXP uSEXP, SEXP lambdaSEXP) {
+// qexp_arma
+arma::vec qexp_arma(arma::vec& p, double lambda);
+RcppExport SEXP _r11_qexp_arma(SEXP pSEXP, SEXP lambdaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::vec& >::type u(uSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type p(pSEXP);
     Rcpp::traits::input_parameter< double >::type lambda(lambdaSEXP);
-    rcpp_result_gen = Rcpp::wrap(qexp(u, lambda));
+    rcpp_result_gen = Rcpp::wrap(qexp_arma(p, lambda));
     return rcpp_result_gen;
 END_RCPP
 }
-// rexp
-arma::vec rexp(unsigned int n, double lambda, const unsigned int& seed);
-RcppExport SEXP _r11_rexp(SEXP nSEXP, SEXP lambdaSEXP, SEXP seedSEXP) {
+// rexp_arma
+arma::vec rexp_arma(unsigned int n, double lambda, const unsigned int& seed);
+RcppExport SEXP _r11_rexp_arma(SEXP nSEXP, SEXP lambdaSEXP, SEXP seedSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< unsigned int >::type n(nSEXP);
     Rcpp::traits::input_parameter< double >::type lambda(lambdaSEXP);
     Rcpp::traits::input_parameter< const unsigned int& >::type seed(seedSEXP);
-    rcpp_result_gen = Rcpp::wrap(rexp(n, lambda, seed));
+    rcpp_result_gen = Rcpp::wrap(rexp_arma(n, lambda, seed));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_r11_qexp", (DL_FUNC) &_r11_qexp, 2},
-    {"_r11_rexp", (DL_FUNC) &_r11_rexp, 3},
+    {"_r11_qexp_arma", (DL_FUNC) &_r11_qexp_arma, 2},
+    {"_r11_rexp_arma", (DL_FUNC) &_r11_rexp_arma, 3},
     {NULL, NULL, 0}
 };
 
